@@ -1,7 +1,7 @@
 WOD (Work Out Of The Day)
 
 Description: 
-An application where people can share their WOD, post a WOD that they programed, and see their WODS.
+An application where people can share their WOD, post a WOD that they programed in a different page, and see their WODS they created and completed.
 
 MVP Features: 
 1. User can post a WOD that they did 
