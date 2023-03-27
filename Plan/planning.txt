@@ -7,4 +7,4 @@ MVP Features:
 1. User can post a WOD that they did 
 2. User can post a WOD that they programed and would like to do in the future
 3. User can see or get a list of their programed WODs and past WODs
-4. User can delete a WOD from ther list
+4. User can move a WOD from programed list to their done list
