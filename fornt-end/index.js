@@ -1,26 +1,21 @@
-const formA = document.getElementsByClassName('formA')
-const nameA = document.getElementsByClassName('nameA')
-const date = document.getElementsByClassName('date')
-const typeWOD = document.getElementsByClassName('type-wod')
-const workoutA = document.getElementsByClassName('workoutA')
-const yesBtn = document.getElementsByClassName('yes')
-const noBtn = document.getElementsByClassName('no')
+const formA = document.getElementById('formA')
+const typeWOD = document.getElementById('type-wod')
+const workoutA = document.getElementById('workoutA')
+
+
 
 
 formA.addEventListener('submit', (event) => {
     event.preventDefault()
 
+    // alert('test')
+
     if (
-    nameA.value === '' ||
-    isNaN(+date.value) ||
     isNaN(+typeWOD.value) ||
-    workoutA.value === '' ||
-    isNaN(+yesBtn.value) ||
-    isNaN(+noBtn.value)
+    workoutA.value === '' 
 ) {
     alert('Some or Many inputs were not filled out correctly')
     return
-}
-
+    }
 })
 
