@@ -8,14 +8,16 @@
     <title>WOD App</title>
 </head>
 <body>
+    <div id="heading">
     <h1>WOD</h1>
     <p>A place to log, create, and find crossfit workouts!</p>
+</div>
      <div id='app'>
         <div id="left">
             <form id="formA">
-                <h2>Create Your WOD</h2>
+                <h2 id="form-header">Let's Create a WOD!</h2>
 
-                Type of WOD: <select id ="type-wod">
+                 <select id ="type-wod">
                     <option value="choose">Choose a WOD Type</option>
                     <option value="emon">EMON ("Every Minute On the Minute")</option>
                     <option value="AMRAP">AMRAP ("As Many Reps As Possible")</option>
@@ -25,17 +27,17 @@
                     <option value="Tabata">Tabata</option>
                 </select>
         
-                    Workout: <input id="workoutA" placeholder="Program The Workout"/>   
+                    Workout: <input type="text" id="workoutA" placeholder=" "/>
 
-                    Completed Workout? <input name="completed" type="radio" id="completed"><label>Yes</label>
-                    <input name="completed" type="radio" id="completed"><label>No</label>
+                    Completed Workout? <label>Yes</label><input name="completed" type="radio" id="completed">
+                    <label>No</label><input name="completed" type="radio" id="completed">
                       
                     <input type="submit" value="Create" id="create-btn">
 
             </form>
         </div>
         <div id="right">
-            <h2>Programed Workouts</h2>
+            <h2 id="prgramed-list">Programed Workouts</h2>
         </div>
         <div id="programed-wods"></div>
      </div>
