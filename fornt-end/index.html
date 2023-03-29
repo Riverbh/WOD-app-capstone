@@ -11,7 +11,7 @@
     <h1>WOD</h1>
     <p>A place to log, create, and find crossfit workouts!</p>
      <div id='app'>
-        <div id="right">
+        <div id="left">
             <form id="formA">
                 <h2>Create Your WOD</h2>
 
@@ -26,10 +26,18 @@
                 </select>
         
                     Workout: <input id="workoutA" placeholder="Program The Workout"/>   
+
+                    Completed Workout? <input name="completed" type="radio" id="completed"><label>Yes</label>
+                    <input name="completed" type="radio" id="completed"><label>No</label>
                       
-                      <button id="sub-bttnA">Create</button>
+                    <input type="submit" value="Create" id="create-btn">
+
             </form>
         </div>
+        <div id="right">
+            <h2>Programed Workouts</h2>
+        </div>
+        <div id="programed-wods"></div>
      </div>
      <script src="index.js"></script>
 </body>

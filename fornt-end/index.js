@@ -1,7 +1,7 @@
 const formA = document.getElementById('formA')
 const typeWOD = document.getElementById('type-wod')
 const workoutA = document.getElementById('workoutA')
-
+const createBtn = document.getElementById('create-btn')
 
 
 
@@ -11,11 +11,16 @@ formA.addEventListener('submit', (event) => {
     // alert('test')
 
     if (
-    isNaN(+typeWOD.value) ||
+    typeWOD.value === null ||
     workoutA.value === '' 
 ) {
     alert('Some or Many inputs were not filled out correctly')
     return
     }
+
+    formA.reset()
+
 })
+
+
 
