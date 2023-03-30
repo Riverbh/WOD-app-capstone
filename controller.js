@@ -18,7 +18,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
         sequelize.query(`
         INSERT INTO wod (wod_type, wod, completed)
-        VALUES (:type, :wod, :completed)
+        VALUES ('${type}', '${wod}', ${completed})
         RETURNING *
         `)
     .then((dbResult) => {
