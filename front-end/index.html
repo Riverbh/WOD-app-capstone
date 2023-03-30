@@ -29,8 +29,7 @@
         
                     <label id="workout-label">Workout:</label> <input type="text" id="workoutA" placeholder=" "/>
 
-                    <label id="completed-workout">Completed Workout?</label> <label>Yes</label><input name="completed" type="radio" id="completed">
-                    <label>No</label><input name="completed" type="radio" id="completed">
+                    <label id="completed-workout">Completed Workout?</label> <label>Yes</label><input name="completed" type="checkbox" id="completed">
                       
                     <input type="submit" value="Create" id="create-btn">
 
@@ -38,10 +37,10 @@
         </div>
         <div id="right">
             <h2 id="prgramed-list">Programed Workouts</h2>
+            <section id="wod-list"></section>
         </div>
-        <div id="programed-wods"></div>
      </div>
-     <script src="../node_modules/axios/dist/axios.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="index.js"></script>
 </body>
 </html>

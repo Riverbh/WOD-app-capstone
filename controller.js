@@ -13,21 +13,33 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
   })
 
   module.exports = {
+
+
     createWOD: (req, res) => {
-        let {type, wod, completed} = req.body
+        let {typeWODInput, workoutInput, completedInput} = req.body
 
         sequelize.query(`
         INSERT INTO wod (wod_type, wod, completed)
-        VALUES ('${type}', '${wod}', ${completed})
-        RETURNING *
+        VALUES ('${typeWODInput}', '${workoutInput}', ${completedInput})
+        returning *;
         `)
     .then((dbResult) => {
+        console.log(dbResult[0])
         res.status(200).send(dbResult[0])
     }).catch((err) => {
         console.log(err)
         res.status(500).send(err)
     })
   },   
+
+  getWODs: (req, res) => {
+    sequelize.query(`
+    SELECT *
+    FROM wod
+    `).then((dbRes) => {
+        res.status(200).send(dbRes[0])
+    }).catch(err => console.lof(err))
+  }
 
 }
 
