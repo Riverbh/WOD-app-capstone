@@ -6,6 +6,7 @@ const workoutA = document.getElementById('workoutA')
 const createBtn = document.getElementById('create-btn')
 const completed = document.getElementById('completed')
 const programedWODList = document.getElementById('wod-list')
+const deleteWODBtn = document.getElementById('delete')
 
 getProgramedWODs()
 
@@ -39,7 +40,6 @@ formA.addEventListener('submit', (event) => {
             getProgramedWODs()
         })
 
-    
 
 })
 
@@ -55,7 +55,7 @@ function getProgramedWODs() {
                 <p>Type of workout: ${elem.wod_type}</p>
                 <h4>Workout: ${elem.wod}</h4>
                 <label>Click when Completed</label>
-                <button>Completed</button>
+                <button wod-id="${elem.wod_id}" onclick="deleteProgramedWODs(event)" id="delete">Completed</button>
                 </div>`
 
                 programedWODList.innerHTML += wodCard
@@ -63,6 +63,21 @@ function getProgramedWODs() {
         })
 }
 
+
+
+
+function deleteProgramedWODs(event) {
+    let wodId = event.target.getAttribute('wod-id')
+    alert(wodId)
+    // let deleteBtn = deleteWODBtn.value
+
+
+    // axios.delete('http://localhost:4000/wod/:id', deleteBtn)
+    // .then((result) => {
+    //     alert("Workout Completed!")
+    //     console.log(result.data)
+    // })
+}
 
 
 

@@ -12,11 +12,14 @@ app.use(express.static('front-end'))
 
 const {
     createWOD,
-    getWODs
+    getWODs,
+    deleteWODs
 } = require('./controller.js')
 
 app.post('/wod', createWOD)
 
 app.get('/wod', getWODs)
+
+app.delete('/wod/:id', deleteWODs)
 
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
