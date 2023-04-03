@@ -27,7 +27,6 @@ formA.addEventListener('submit', (event) => {
     let body = {
         typeWODInput: typeWOD.value ,
         workoutInput: workoutA.value ,
-        completedInput: completed.checked 
     }
     // console.log(typeWODInput, workoutInput, completedInput)
 
@@ -35,7 +34,6 @@ formA.addEventListener('submit', (event) => {
         .then(() => {
             typeWOD.value = ''
             workoutA.value = ''
-            completed.checked = false
 
             getProgramedWODs()
         })
@@ -68,12 +66,12 @@ function getProgramedWODs() {
 
 function deleteProgramedWODs(event) {
     let wodId = event.target.getAttribute('wod-id')
-    let btn = event.target.parentElement
-    alert(wodId)
+    let wodDiv = event.target.parentElement
+    // alert(wodId)
 
     axios.delete('/wod/' + wodId)
     .then((result) => {
-        btn.remove()
+        wodDiv.remove()
         alert("Workout Completed!")
         console.log(result.data)
     })

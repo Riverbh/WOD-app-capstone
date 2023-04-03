@@ -16,11 +16,11 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 
     createWOD: (req, res) => {
-        let {typeWODInput, workoutInput, completedInput} = req.body
+        let {typeWODInput, workoutInput } = req.body
 
         sequelize.query(`
-        INSERT INTO wod (wod_type, wod, completed)
-        VALUES ('${typeWODInput}', '${workoutInput}', ${completedInput})
+        INSERT INTO wod (wod_type, wod)
+        VALUES ('${typeWODInput}', '${workoutInput}')
         returning *;
         `)
     .then((dbResult) => {
