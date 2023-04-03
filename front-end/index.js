@@ -71,16 +71,6 @@ function deleteProgramedWODs(event) {
     let btn = event.target.parentElement
     alert(wodId)
 
-    //  axios.delete(`http://localhost:4000/wod/${wodId}`)
-    // .then((result) => {
-    //   alert("Workout Completed!");
-    //   console.log(result.data);
-    // });
-
-
-    // let deleteBtn = deleteWODBtn.value
-
-
     axios.delete('/wod/' + wodId)
     .then((result) => {
         btn.remove()
