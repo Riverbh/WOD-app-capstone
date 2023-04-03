@@ -24,6 +24,7 @@
 }
 
 form {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -97,3 +98,30 @@ h1 {
 /* #prgramed-list {
     position: relative;
 } */
+
+#delete {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    outline: 0;
+    padding: 4px 20px 0;
+}
+
+#wod-card{
+    background-color: #15172b;
+    border-radius: 20px;
+    padding: 15px;
+    padding-top: 5px;
+    margin-top: 15px;
+
+}
+
+#wod-listed{
+    background-color: #15172b;
+}
+
+#type-listed{
+    background-color: #15172b;
+}

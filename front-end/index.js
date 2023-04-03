@@ -34,8 +34,9 @@ formA.addEventListener('submit', (event) => {
         .then(() => {
             typeWOD.value = ''
             workoutA.value = ''
-
+            
             getProgramedWODs()
+            alert('Successfully Created a Workout!')
         })
 
 
@@ -50,8 +51,8 @@ function getProgramedWODs() {
             res.data.forEach(elem => {
                 console.log(elem)
                 let wodCard = `<div id="wod-card">
-                <p>Type of workout: ${elem.wod_type}</p>
-                <h4>Workout: ${elem.wod}</h4>
+                <p id="type-listed">Type of workout: ${elem.wod_type}</p>
+                <h4 id="wod-listed">Workout: ${elem.wod}</h4>
                 <label>Click when Completed</label>
                 <button wod-id="${elem.wod_id}" onclick="deleteProgramedWODs(event)" id="delete">Completed</button>
                 </div>`
