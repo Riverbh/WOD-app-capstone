@@ -51,7 +51,7 @@ function getProgramedWODs() {
         .then(res => {
             res.data.forEach(elem => {
                 console.log(elem)
-                let wodCard = `<div class="country-card">
+                let wodCard = `<div id="wod-card">
                 <p>Type of workout: ${elem.wod_type}</p>
                 <h4>Workout: ${elem.wod}</h4>
                 <label>Click when Completed</label>
@@ -68,7 +68,7 @@ function getProgramedWODs() {
 
 function deleteProgramedWODs(event) {
     let wodId = event.target.getAttribute('wod-id')
-    let btn = event.target
+    let btn = event.target.parentElement
     alert(wodId)
 
     //  axios.delete(`http://localhost:4000/wod/${wodId}`)
@@ -83,6 +83,7 @@ function deleteProgramedWODs(event) {
 
     axios.delete('/wod/' + wodId)
     .then((result) => {
+        btn.remove()
         alert("Workout Completed!")
         console.log(result.data)
     })
