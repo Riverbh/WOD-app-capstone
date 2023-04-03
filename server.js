@@ -20,6 +20,6 @@ app.post('/wod', createWOD)
 
 app.get('/wod', getWODs)
 
-app.delete('/wod/:id', deleteWODs)
+app.delete('/wod/:wod_id', deleteWODs)
 
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))

@@ -68,15 +68,24 @@ function getProgramedWODs() {
 
 function deleteProgramedWODs(event) {
     let wodId = event.target.getAttribute('wod-id')
+    let btn = event.target
     alert(wodId)
+
+    //  axios.delete(`http://localhost:4000/wod/${wodId}`)
+    // .then((result) => {
+    //   alert("Workout Completed!");
+    //   console.log(result.data);
+    // });
+
+
     // let deleteBtn = deleteWODBtn.value
 
 
-    // axios.delete('http://localhost:4000/wod/:id', deleteBtn)
-    // .then((result) => {
-    //     alert("Workout Completed!")
-    //     console.log(result.data)
-    // })
+    axios.delete('/wod/' + wodId)
+    .then((result) => {
+        alert("Workout Completed!")
+        console.log(result.data)
+    })
 }
 
 

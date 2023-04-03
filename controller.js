@@ -42,17 +42,14 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
   },
   
   deleteWODs: (req, res) => {
+    console.log('running')
+    let { wod_id } = req.params
     sequelize.query(`
     DELETE FROM wod
-    WHERE id = :id;
-    `, {
-        replacements: {
-            id: id
-        }
-    }
-    ) .then((dbRes) => {
+    WHERE wod_id = ${wod_id}
+    `) .then((dbRes) => {
         res.status(200).send(dbRes[0])
-    }).catch(err => console.lof(err))
+    }).catch(err => console.log(err))
   }
 
 }
