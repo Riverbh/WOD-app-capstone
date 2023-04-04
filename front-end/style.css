@@ -29,7 +29,7 @@ form {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 500px;
+    height: 350px;
     width: 500px;
     padding: 30px;
     background-color: #15172b;
@@ -124,4 +124,30 @@ h1 {
 
 #type-listed{
     background-color: #15172b;
+}
+
+#form-header {
+    text-align: center;
+}
+
+select {
+    height: 50px;
+}
+
+#workoutA {
+    height: 50px;
+}
+
+#workout-label {
+    padding-bottom: 2px;
+}
+
+#create-btn:hover{
+    background-color:#002ead;
+      transition: 0.7s;
+}
+
+#delete:hover {
+    background-color:#002ead;
+      transition: 0.7s;
 }
