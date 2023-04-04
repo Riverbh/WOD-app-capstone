@@ -16,6 +16,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
+    color: #72A0C1;
 }
 
 .body-elemnts {
@@ -84,6 +85,7 @@ h1 {
     margin-bottom: 1px;
     text-align: center;
     font-size: 5em;
+    color: #72A0C1;
 }
 
 /* p {
@@ -109,7 +111,7 @@ h1 {
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
-    color: #eee;
+    color: #72A0C1;
     outline: 0;
     padding: 4px 20px 0;
 }
@@ -129,6 +131,7 @@ h1 {
 
 #type-listed{
     background-color: #15172b;
+    color:#72A0C1
 }
 
 #form-header {
@@ -145,6 +148,7 @@ select {
 
 #workout-label {
     padding-bottom: 2px;
+    color: #72A0C1
 }
 
 #create-btn:hover{
@@ -169,4 +173,14 @@ h6 {
     text-align: center;
     margin-top: 1px;
     margin-bottom: 0px;
+    color: #72A0C1;
+}
+
+#create-btn {
+    color: #72A0C1
+}
+
+label {
+    color:#72A0C1
+    
 }
