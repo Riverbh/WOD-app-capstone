@@ -30,7 +30,7 @@ formA.addEventListener('submit', (event) => {
     }
     // console.log(typeWODInput, workoutInput, completedInput)
 
-    axios.post('http://localhost:4000/wod', body)
+    axios.post('/wod', body)
         .then(() => {
             typeWOD.value = ''
             workoutA.value = ''
@@ -46,7 +46,7 @@ formA.addEventListener('submit', (event) => {
 function getProgramedWODs() {
     programedWODList.innerHTML = ''
 
-    axios.get('http://localhost:4000/wod')
+    axios.get('/wod')
         .then(res => {
             res.data.forEach(elem => {
                 console.log(elem)
