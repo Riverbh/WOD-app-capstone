@@ -153,12 +153,12 @@ select {
 }
 
 #create-btn:hover{
-    background-color:#002ead;
+    background-color:#72A0C1;
       transition: 0.7s;
 }
 
 #delete:hover {
-    background-color:#002ead;
+    background-color:#72A0C1;
       transition: 0.7s;
 }
 
@@ -177,9 +177,7 @@ h6 {
     color: #72A0C1;
 }
 
-#create-btn {
-    color: #72A0C1
-}
+
 
 label {
     color:#72A0C1
