@@ -9,6 +9,7 @@ const {SERVER_PORT} = process.env
 app.use(express.json())
 app.use(cors())
 app.use(express.static('front-end'))
+app.use(express.static(`${__dirname}/front-end`))
 
 const {
     createWOD,
